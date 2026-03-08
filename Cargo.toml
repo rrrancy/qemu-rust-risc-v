@@ -1,0 +1,23 @@
+[package]
+name = "mysim"
+version = "0.1.0"
+edition = "2021"  # <--- 已修正：从 2024 改为 2021
+
+[dependencies]
+# 核心依赖
+goblin = "0.7"
+byteorder = "1.5"
+log = "0.4"
+env_logger = "0.10"
+mmap-rs = "0.6"
+
+digest = "0.10"
+
+# 寄存器位操作辅助
+bitflags = "2.4"
+num-traits = "0.2"
+num-derive = "0.4"
+
+# 错误处理 (强烈建议加上，Claude 生成的代码很可能会用到)
+anyhow = "1.0"
+thiserror = "1.0"
